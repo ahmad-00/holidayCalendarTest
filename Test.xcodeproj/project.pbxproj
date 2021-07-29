@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D2E44B3726B2F7B8008668A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B3626B2F7B8008668A9 /* AppDelegate.swift */; };
-		D2E44B3926B2F7B8008668A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B3826B2F7B8008668A9 /* SceneDelegate.swift */; };
-		D2E44B3B26B2F7B8008668A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B3A26B2F7B8008668A9 /* ViewController.swift */; };
 		D2E44B3E26B2F7B8008668A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E44B3C26B2F7B8008668A9 /* Main.storyboard */; };
 		D2E44B4026B2F7BB008668A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2E44B3F26B2F7BB008668A9 /* Assets.xcassets */; };
 		D2E44B4326B2F7BB008668A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E44B4126B2F7BB008668A9 /* LaunchScreen.storyboard */; };
 		D2E44B4E26B2F7BB008668A9 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B4D26B2F7BB008668A9 /* TestTests.swift */; };
 		D2E44B5926B2F7BB008668A9 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B5826B2F7BB008668A9 /* TestUITests.swift */; };
+		D2E44B6C26B2F988008668A9 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B6B26B2F988008668A9 /* Color+Ext.swift */; };
+		D2E44B6E26B2FB4E008668A9 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B6D26B2FB4E008668A9 /* CalendarVC.swift */; };
+		D2E44B7226B2FB7B008668A9 /* CalendarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7126B2FB7B008668A9 /* CalendarVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,6 @@
 /* Begin PBXFileReference section */
 		D2E44B3326B2F7B8008668A9 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E44B3626B2F7B8008668A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2E44B3826B2F7B8008668A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D2E44B3A26B2F7B8008668A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2E44B3D26B2F7B8008668A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2E44B3F26B2F7BB008668A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2E44B4226B2F7BB008668A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		D2E44B5426B2F7BB008668A9 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E44B5826B2F7BB008668A9 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		D2E44B5A26B2F7BB008668A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2E44B6B26B2F988008668A9 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		D2E44B6D26B2FB4E008668A9 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		D2E44B7126B2FB7B008668A9 /* CalendarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,10 @@
 		D2E44B3526B2F7B8008668A9 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				D2E44B3626B2F7B8008668A9 /* AppDelegate.swift */,
-				D2E44B3826B2F7B8008668A9 /* SceneDelegate.swift */,
-				D2E44B3A26B2F7B8008668A9 /* ViewController.swift */,
-				D2E44B3C26B2F7B8008668A9 /* Main.storyboard */,
-				D2E44B3F26B2F7BB008668A9 /* Assets.xcassets */,
-				D2E44B4126B2F7BB008668A9 /* LaunchScreen.storyboard */,
-				D2E44B4426B2F7BB008668A9 /* Info.plist */,
+				D2E44B6626B2F8A3008668A9 /* Application */,
+				D2E44B6926B2F948008668A9 /* Helper */,
+				D2E44B6726B2F8B8008668A9 /* MainView */,
+				D2E44B6826B2F8C0008668A9 /* Model */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -126,6 +125,58 @@
 				D2E44B5A26B2F7BB008668A9 /* Info.plist */,
 			);
 			path = TestUITests;
+			sourceTree = "<group>";
+		};
+		D2E44B6626B2F8A3008668A9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D2E44B3626B2F7B8008668A9 /* AppDelegate.swift */,
+				D2E44B3C26B2F7B8008668A9 /* Main.storyboard */,
+				D2E44B3F26B2F7BB008668A9 /* Assets.xcassets */,
+				D2E44B4126B2F7BB008668A9 /* LaunchScreen.storyboard */,
+				D2E44B4426B2F7BB008668A9 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D2E44B6726B2F8B8008668A9 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D2E44B6F26B2FB53008668A9 /* CalendarView */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		D2E44B6826B2F8C0008668A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2E44B6926B2F948008668A9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D2E44B6A26B2F971008668A9 /* Extension */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		D2E44B6A26B2F971008668A9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D2E44B6B26B2F988008668A9 /* Color+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D2E44B6F26B2FB53008668A9 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				D2E44B6D26B2FB4E008668A9 /* CalendarVC.swift */,
+				D2E44B7126B2FB7B008668A9 /* CalendarVM.swift */,
+			);
+			path = CalendarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2E44B3B26B2F7B8008668A9 /* ViewController.swift in Sources */,
 				D2E44B3726B2F7B8008668A9 /* AppDelegate.swift in Sources */,
-				D2E44B3926B2F7B8008668A9 /* SceneDelegate.swift in Sources */,
+				D2E44B6E26B2FB4E008668A9 /* CalendarVC.swift in Sources */,
+				D2E44B6C26B2F988008668A9 /* Color+Ext.swift in Sources */,
+				D2E44B7226B2FB7B008668A9 /* CalendarVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YQ36FH25VK;
-				INFOPLIST_FILE = Test/Info.plist;
+				INFOPLIST_FILE = Test/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YQ36FH25VK;
-				INFOPLIST_FILE = Test/Info.plist;
+				INFOPLIST_FILE = Test/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
