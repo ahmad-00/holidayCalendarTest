@@ -19,6 +19,9 @@
 		D2E44B7626B3186F008668A9 /* URLSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7526B3186F008668A9 /* URLSessionHelper.swift */; };
 		D2E44B7826B31BCE008668A9 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7726B31BCE008668A9 /* Holiday.swift */; };
 		D2E44B7A26B325BD008668A9 /* NavBarStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7926B325BD008668A9 /* NavBarStatus.swift */; };
+		D2E44B7B26B32FFC008668A9 /* CalendarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7126B2FB7B008668A9 /* CalendarVM.swift */; };
+		D2E44B7D26B33183008668A9 /* holidays.json in Resources */ = {isa = PBXBuildFile; fileRef = D2E44B7C26B33183008668A9 /* holidays.json */; };
+		D2E44B7E26B33183008668A9 /* holidays.json in Resources */ = {isa = PBXBuildFile; fileRef = D2E44B7C26B33183008668A9 /* holidays.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,7 @@
 		D2E44B7526B3186F008668A9 /* URLSessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHelper.swift; sourceTree = "<group>"; };
 		D2E44B7726B31BCE008668A9 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
 		D2E44B7926B325BD008668A9 /* NavBarStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarStatus.swift; sourceTree = "<group>"; };
+		D2E44B7C26B33183008668A9 /* holidays.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = holidays.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		D2E44B3526B2F7B8008668A9 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				D2E44B7C26B33183008668A9 /* holidays.json */,
 				D2E44B6626B2F8A3008668A9 /* Application */,
 				D2E44B6926B2F948008668A9 /* Helper */,
 				D2E44B6726B2F8B8008668A9 /* MainView */,
@@ -285,6 +290,7 @@
 			files = (
 				D2E44B4326B2F7BB008668A9 /* LaunchScreen.storyboard in Resources */,
 				D2E44B4026B2F7BB008668A9 /* Assets.xcassets in Resources */,
+				D2E44B7D26B33183008668A9 /* holidays.json in Resources */,
 				D2E44B3E26B2F7B8008668A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E44B7E26B33183008668A9 /* holidays.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E44B7B26B32FFC008668A9 /* CalendarVM.swift in Sources */,
 				D2E44B4E26B2F7BB008668A9 /* TestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
