@@ -13,9 +13,12 @@
 		D2E44B4326B2F7BB008668A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2E44B4126B2F7BB008668A9 /* LaunchScreen.storyboard */; };
 		D2E44B4E26B2F7BB008668A9 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B4D26B2F7BB008668A9 /* TestTests.swift */; };
 		D2E44B5926B2F7BB008668A9 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B5826B2F7BB008668A9 /* TestUITests.swift */; };
-		D2E44B6C26B2F988008668A9 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B6B26B2F988008668A9 /* Color+Ext.swift */; };
 		D2E44B6E26B2FB4E008668A9 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B6D26B2FB4E008668A9 /* CalendarVC.swift */; };
 		D2E44B7226B2FB7B008668A9 /* CalendarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7126B2FB7B008668A9 /* CalendarVM.swift */; };
+		D2E44B7426B31187008668A9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7326B31187008668A9 /* NetworkManager.swift */; };
+		D2E44B7626B3186F008668A9 /* URLSessionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7526B3186F008668A9 /* URLSessionHelper.swift */; };
+		D2E44B7826B31BCE008668A9 /* Holiday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7726B31BCE008668A9 /* Holiday.swift */; };
+		D2E44B7A26B325BD008668A9 /* NavBarStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E44B7926B325BD008668A9 /* NavBarStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +51,12 @@
 		D2E44B5426B2F7BB008668A9 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2E44B5826B2F7BB008668A9 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		D2E44B5A26B2F7BB008668A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2E44B6B26B2F988008668A9 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		D2E44B6D26B2FB4E008668A9 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		D2E44B7126B2FB7B008668A9 /* CalendarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVM.swift; sourceTree = "<group>"; };
+		D2E44B7326B31187008668A9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D2E44B7526B3186F008668A9 /* URLSessionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHelper.swift; sourceTree = "<group>"; };
+		D2E44B7726B31BCE008668A9 /* Holiday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Holiday.swift; sourceTree = "<group>"; };
+		D2E44B7926B325BD008668A9 /* NavBarStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 		D2E44B6826B2F8C0008668A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D2E44B7726B31BCE008668A9 /* Holiday.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,17 +164,11 @@
 		D2E44B6926B2F948008668A9 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				D2E44B6A26B2F971008668A9 /* Extension */,
+				D2E44B7326B31187008668A9 /* NetworkManager.swift */,
+				D2E44B7526B3186F008668A9 /* URLSessionHelper.swift */,
+				D2E44B7926B325BD008668A9 /* NavBarStatus.swift */,
 			);
 			path = Helper;
-			sourceTree = "<group>";
-		};
-		D2E44B6A26B2F971008668A9 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				D2E44B6B26B2F988008668A9 /* Color+Ext.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		D2E44B6F26B2FB53008668A9 /* CalendarView */ = {
@@ -309,10 +310,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E44B7826B31BCE008668A9 /* Holiday.swift in Sources */,
+				D2E44B7426B31187008668A9 /* NetworkManager.swift in Sources */,
 				D2E44B3726B2F7B8008668A9 /* AppDelegate.swift in Sources */,
 				D2E44B6E26B2FB4E008668A9 /* CalendarVC.swift in Sources */,
-				D2E44B6C26B2F988008668A9 /* Color+Ext.swift in Sources */,
+				D2E44B7626B3186F008668A9 /* URLSessionHelper.swift in Sources */,
 				D2E44B7226B2FB7B008668A9 /* CalendarVM.swift in Sources */,
+				D2E44B7A26B325BD008668A9 /* NavBarStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

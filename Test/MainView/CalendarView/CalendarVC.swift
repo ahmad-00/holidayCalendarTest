@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class CalendarVC: UIViewController {
     
@@ -49,10 +50,48 @@ class CalendarVC: UIViewController {
         return lbl
     }()
     
+    private var cancelable = Set<AnyCancellable>()
+    
+    private let activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+    
     init(viewModel: CalendarVM) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        setupView()
+        overrideUserInterfaceStyle = .light
+        setNavTitle(.None)
+        view.backgroundColor = .white
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        viewModel.fetchHolidays()
+        viewModel.$holidays.receive(on: DispatchQueue.main).sink { _result in
+        } receiveValue: {[weak self] _value in
+            guard let `self` = self else {
+                return
+            }
+            if _value.count != 0 {
+                self.setupView()
+            }
+        }.store(in: &cancelable)
+        
+        viewModel.$result.receive(on: DispatchQueue.main).sink { _result in
+        } receiveValue: {[weak self] _value in
+            guard let `self` = self else {
+                return
+            }
+            self.resultLbl.text = _value
+        }.store(in: &cancelable)
+        
+        viewModel.$navBarStatus.receive(on: DispatchQueue.main).sink { _result in
+        } receiveValue: {[weak self] _value in
+            guard let `self` = self else {
+                return
+            }
+            self.setNavTitle(_value)
+        }.store(in: &cancelable)
+        
     }
     
     required init?(coder: NSCoder) {
@@ -61,9 +100,6 @@ class CalendarVC: UIViewController {
     
     private func setupView() {
         // base view setup
-        overrideUserInterfaceStyle = .light
-        title = "Bussiness Days"
-        view.backgroundColor = .white
         let tapOutside = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapOutside)
         
@@ -121,16 +157,38 @@ class CalendarVC: UIViewController {
     
     @objc func startDateChanged(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "yyyy/MM/dd"
         startDateTF.text = formatter.string(from: sender.date)
         viewModel.setStartDate(sender.date)
     }
     
     @objc func endDateChanged(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
+        formatter.dateFormat = "yyyy/MM/dd"
         endDateTF.text = formatter.string(from: sender.date)
         viewModel.setEndDate(sender.date)
+    }
+    
+    func setNavTitle(_ status: NavBarStatus) {
+        
+        switch status {
+        case .None:
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            self.navigationItem.title = "Bussiness Days Calculator"
+            activityIndicator.stopAnimating()
+        case .Loading:
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            self.navigationItem.title = "Loading"
+            let barButton = UIBarButtonItem(customView: activityIndicator)
+            self.navigationItem.setRightBarButton(barButton, animated: true)
+            activityIndicator.startAnimating()
+        case .Error(let message):
+            activityIndicator.stopAnimating()
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.red]
+            self.navigationItem.title = message
+        }
+        
+        
     }
     
 }
